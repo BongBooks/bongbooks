@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!--Compatible with the latest version of IE-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;">
+    <!--CSS-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!--Javascripts NOTE: Always import jquery first-->
+    <script src="../Scripts/jquery-1.11.3.js" language="javascript" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <!--Title-->
+    <title>BongBooks : Textbook Exchange</title>
+</head>
+<body>
+    <div id="top">
+        <!--top menu-->
+        <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <!--Collapse class for responsible toggle icon and bar-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--Need to adjust size of icon-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sub_navbar">
+                        <span class="fa fa-user"></span>
+                    </button>
+                    <!--Icon should be added instead of HTMLtext link-->
+                    @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+
+
+                <div class="navbar-collapse collapse navbar-left" id="main_navbar">
+                    <ul class="nav navbar-nav">
+                        <!--Order: Text, ActionName, ControllerName-->
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Index", "Home")</li>
+                    </ul>
+                </div>
+                <div class="navbar-collapse collapse navbar-right" id="sub_navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="dropdown-toggle-login">
+                            <a href="#" data-toggle="modal" data-target="#modal_login">
+                                <span class="fa fa-user"></span>
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Modal Dialog for Login-->
+        <div class="modal fade" id="modal_login">
+            <div class="modal-dialog" style="width:300px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="modal_login_loginform">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input name="user_id" class="form-control" id="uid" required="" type="text" placeholder="ID" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input name="user_password" class="form-control" id="upw" type="password" placeholder="password" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-xs pull-right" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
+                                </div>
+                                <!--Clearfix for correct margin between form-groups-->
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="fa fa-check"></span>
+                                    Login
+                                </button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Welcome !</h1>
+                    <div class="input-group">
+                        <input name="search_keyword" class="form-control" type="search" placeholder="Search by Title, Author or ISBN" value="">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-flat" onclick="location.href='@Url.Action("Register", "Account")'"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
