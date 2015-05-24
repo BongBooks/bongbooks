@@ -4,6 +4,8 @@
 
 <!DOCTYPE html>
 
+<!--Gu Young Chung-->
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -22,7 +24,7 @@
 <body>
     <div id="top">
         <!--top menu-->
-        <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+        <nav class="navbar navbar-default navbar-static-top" id="navbar" style="margin-bottom:0px;">
             <div class="container">
                 <div class="navbar-header">
                     <!--Collapse class for responsible toggle icon and bar-->
@@ -48,6 +50,7 @@
                         <li>@Html.ActionLink("Contact", "Index", "Home")</li>
                     </ul>
                 </div>
+
                 <div class="navbar-collapse collapse navbar-right" id="sub_navbar">
                     <ul class="nav navbar-nav">
                         <li class="dropdown" id="dropdown-toggle-login">
@@ -97,16 +100,22 @@
     </div>
 
     <div id="main">
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Welcome !</h1>
-                    <div class="input-group">
-                        <input name="search_keyword" class="form-control" type="search" placeholder="Search by Title, Author or ISBN" value="">
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-flat" onclick="location.href='@Url.Action("Register", "Account")'"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
+        <div id="main_title">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Welcome !</h1>
+                </div>
+            </div>
+        </div>
 
+        <div id="main_body">
+            <div class="container">
+                <div class="input-group">
+                    <input name="search_keyword" class="form-control" type="search" placeholder="Search by Title, Author or ISBN" value="">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-flat" onclick="location.href='@Url.Action("Register", "Account")'"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

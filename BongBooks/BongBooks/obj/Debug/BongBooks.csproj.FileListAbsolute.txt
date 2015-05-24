@@ -20,3 +20,47 @@ c:\users\sodabi\documents\visual studio 2013\Projects\BongBooks\BongBooks\bin\Sy
 c:\users\sodabi\documents\visual studio 2013\Projects\BongBooks\BongBooks\obj\Debug\BongBooks.csprojResolveAssemblyReference.cache
 c:\users\sodabi\documents\visual studio 2013\Projects\BongBooks\BongBooks\obj\Debug\BongBooks.dll
 c:\users\sodabi\documents\visual studio 2013\Projects\BongBooks\BongBooks\obj\Debug\BongBooks.pdb
+E:\Git\BongBooks\BongBooks\bin\BongBooks.dll.config
+E:\Git\BongBooks\BongBooks\bin\BongBooks.dll
+E:\Git\BongBooks\BongBooks\bin\BongBooks.pdb
+E:\Git\BongBooks\BongBooks\bin\Microsoft.Web.Infrastructure.dll
+E:\Git\BongBooks\BongBooks\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Git\BongBooks\BongBooks\bin\Newtonsoft.Json.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.Helpers.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.Mvc.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.Razor.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.Deployment.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.dll
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.Razor.dll
+E:\Git\BongBooks\BongBooks\bin\Newtonsoft.Json.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.Helpers.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.Mvc.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.Razor.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.Deployment.xml
+E:\Git\BongBooks\BongBooks\bin\System.Web.WebPages.Razor.xml
+E:\Git\BongBooks\BongBooks\obj\Debug\BongBooks.csprojResolveAssemblyReference.cache
+E:\Git\BongBooks\BongBooks\obj\Debug\BongBooks.dll
+E:\Git\BongBooks\BongBooks\obj\Debug\BongBooks.pdb
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\BongBooks.dll.config
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\BongBooks.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\BongBooks.pdb
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\Microsoft.Web.Infrastructure.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\Newtonsoft.Json.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Helpers.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Mvc.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Razor.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.Deployment.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.Razor.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\Newtonsoft.Json.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Helpers.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Mvc.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.Razor.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.Deployment.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\bin\System.Web.WebPages.Razor.xml
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\obj\Debug\BongBooks.csprojResolveAssemblyReference.cache
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\obj\Debug\BongBooks.dll
+E:\Git\BongProject\bongbooks\BongBooks\BongBooks\obj\Debug\BongBooks.pdb
