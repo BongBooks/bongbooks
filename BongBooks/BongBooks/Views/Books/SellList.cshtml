@@ -1,0 +1,344 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <!--Compatible with the latest version of IE-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;">
+    <!--CSS-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!--Javascripts NOTE: Always import jquery first-->
+    <script src="../Scripts/jquery-1.11.3.js" language="javascript" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <!--Title-->
+    <title>Sell List</title>
+
+    <!--Custom inline CSS code-->
+    <style type="text/css">
+        /*Book List*/
+        #list {
+            width: 1100px;
+            height: 360px;
+            border: 1px solid #ccc;
+            margin-bottom: 25px;
+            background: #fff;
+            box-shadow: 0px, 1px, 3px, rgba(0, 0, 0, 0.5);
+        }
+
+        .img_box {
+            width: 240px;
+            height: 360px;
+            float: left;
+            display: inline;
+            position: relative;
+            border-right: 1px solid #ccc;
+        }
+
+        .text_box {
+            width: 740px;
+            height: 345px;
+            float: left;
+            display: inline;
+            padding-top: 15px;
+            padding-left: 10px;
+            position: relative;
+
+        }
+
+        .right_panel {
+            width: 108px;
+            height: 360px;
+            float: left;
+            background: #fff;
+            border-left: 1px dashed #ccc;
+        }
+
+        /*Book Description*/
+        #title {
+            width: 730px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .en_title { 
+            color: #333;
+        }
+        #title > a:hover > h2.en_title {color: #da6d10;
+
+        }
+
+        #author {
+            margin-top: 10px;
+            width: 720px;
+            height: 20px;
+            float: left;
+            padding-left: 5px;
+        }
+        
+        #author > p {
+                font-size: 14px;
+                color: #666;
+            }
+
+        p.writer, p.illust {
+            float: left;
+            display: inline;
+            padding-left: 5px;
+            padding-right: 2px;
+        }
+
+        p.trans {
+            float: left;
+            padding-left: 5px;
+            padding-right: 2px;
+        }
+
+        p.illust, p.trans {
+            border-left: 1px solid #666;
+        }
+        /* publisher */
+        #publisher {
+            width: 720px;
+            margin-top: 10px;
+            margin-left: 5px;
+            float: left;
+        }
+
+            #publisher > .publisher_title {
+                width: auto;
+                height: auto;
+                float: left;
+                display: inline-block;
+                padding-right: 10px;
+                color: #666;
+                font-size: 14px;
+                padding-bottom: 8px;
+            }
+
+            #publisher > div {
+                width: 670px;
+                float: right;
+            }
+
+                #publisher > div > p.en_pub {
+                    color: #333;
+                    font-size: 14px;
+                    padding-bottom: 8px;
+                }
+        /* Description */
+        #info {
+            width: 720px;
+            margin-top: 14px;
+            margin-left: 5px;
+            float: left;
+        }
+
+        .info_title {
+            color: #333;
+            font-size: 14px;
+            padding-bottom: 5px;
+        }
+
+        .info_text {
+            color: #777;
+            font-size: 14px;
+            line-height: 24px;
+            width: 720px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <!--top menu-->
+        <nav class="navbar navbar-default navbar-static-top" id="navbar" style="margin-bottom:0px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <!--Collapse class for responsible toggle icon and bar-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--Need to adjust size of icon-->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sub_navbar">
+                        <span class="fa fa-user"></span>
+                    </button>
+                    <!--Icon should be added instead of HTMLtext link-->
+                    @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
+                </div>
+
+
+                <div class="navbar-collapse collapse navbar-left" id="main_navbar">
+                    <ul class="nav navbar-nav">
+                        <!--Order: Text, ActionName, ControllerName-->
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Index", "Home")</li>
+                    </ul>
+                </div>
+
+                <div class="navbar-collapse collapse navbar-right" id="sub_navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="dropdown-toggle-login">
+                            <a href="#" data-toggle="modal" data-target="#modal_login">
+                                <span class="fa fa-user"></span>
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Modal Dialog for Login-->
+        <div class="modal fade" id="modal_login">
+            <div class="modal-dialog" style="width:300px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="modal_login_loginform">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input name="user_id" class="form-control" id="uid" required="" type="text" placeholder="ID" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input name="user_password" class="form-control" id="upw" type="password" placeholder="password" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-xs pull-right" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
+                                </div>
+                                <!--Clearfix for correct margin between form-groups-->
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">
+                                    <span class="fa fa-check"></span>
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="list">
+            <div class="img_box">
+                <img width="240" height="360" src="~/Content/Images/absolute_java.jpg" />
+            </div>
+            <div class="text_box">
+                <div id="title">
+                    <h2 class="en_title">Absolute Java</h2>
+                </div>
+                <div id="author">
+                    <p class="writer">Walter Savitch</p>
+                    <p class="illust">Kenrick Mock</p>
+                    <p class="trans">Paperback</p>
+                </div>
+                <div id="publisher">
+                    <p class="publisher_title">
+                        Publisher
+                    </p>
+                    <p>Pearson</p>
+                </div>
+                <div id="info">
+                    <p class="info_title">
+                        Description
+                    </p>
+                    <p class="info_text">
+                        Absolute Java is a very clear and easy to understand book, which helps you to progress your programming skills.
+                        Unfortunately it seems, that some services like myprogramminglab.com (where you can do your exercises) are not available
+                        when ordered through Amazon and the Pearson customer service is quite persistent not to allow you that.
+                    </p>
+                </div>
+                <div class="right_panel">
+
+                </div>
+
+            </div>
+        </div>
+        <div id="list">
+            <div class="img_box">
+                <img width="240" height="360" src="~/Content/Images/asp.jpg" />
+            </div>
+            <div class="text_box">
+                <div id="title">
+                    <h2 class="en_title">Beginning ASP.NET 4.5.1: in C# and VB (Wrox Programmer to Programmer) </h2>
+                </div>
+                <div id="author">
+                    <p class="writer">Imar Spaanjaars </p>
+                </div>
+                <div id="publisher">
+                    <p class="publisher_title">
+                        Publisher
+                    </p>
+                    <p>Wrox</p>
+                </div>
+                <div id="info">
+                    <p class="info_title">
+                        Description
+                    </p>
+                    <p class="info_text">
+                        In this comprehensive guide to getting started with ASP.NET 4.5.1, 
+                        best-selling author Imar Spaanjaars provides a firm foundation for coders new to ASP.NET and key insights for those not yet familiar
+                        with the important updates in the 4.5.1 release. Readers will learn how to build full-featured ASP.NET websites 
+                        using Visual Studio Express 2013 for Web, Microsoft’s free development tool for ASP.NET web applications. 
+                    </p>
+                </div>
+                <div class="right_panel">
+
+                </div>
+
+            </div>
+        </div>
+        <div id="list">
+            <div class="img_box">
+                <img width="240" height="360" src="~/Content/Images/csharp.jpg" />
+            </div>
+            <div class="text_box">
+                <div id="title">
+                    <h2 class="en_title">C# 5.0 in a Nutshell: The Definitive Reference </h2>
+                </div>
+                <div id="author">
+                    <p class="writer">Joseph Albahari</p>
+                    <p class="illust">Ben Albahari</p>
+                    <p class="trans">Paperback</p>
+                </div>
+                <div id="publisher">
+                    <p class="publisher_title">
+                        Publisher
+                    </p>
+                    <p>O'Reilly Media; Fifth Edition edition</p>
+                </div>
+                <div id="info">
+                    <p class="info_title">
+                        Description
+                    </p>
+                    <p class="info_text">
+                        This book has it all - Its concise (as name suggests) but at the same time topics are discussed in perfect depth. 
+                        I recommend this book to any one who is looking for immediate to advance knowledge on C#. 
+                        However if you are just starting on C# better to grow you knowledge base using other book(s) before picking this one 
+                        because this book does require some basic C# knowledge. 
+                    </p>
+                </div>
+                <div class="right_panel">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
